@@ -136,6 +136,7 @@ void bgtaskStartSchedule() {
     } while (ret == BGTASK_RUNTIME_STATUS_CONTINUE && cycleTimes <= BGTASK_MAX_RUN_CYCLE_TIMES);
     if (ret == BGTASK_RUNTIME_STATUS_FINISH) {
       task->ops->fFinish(task);
+      free(msg);
     }
   }
 }
