@@ -96,6 +96,8 @@ int main() {
     pthread_join(threadId[i], NULL);
   }
 
+  // Resident task. Do not free all the bgtasks.
+
   return 0;
 }
 
